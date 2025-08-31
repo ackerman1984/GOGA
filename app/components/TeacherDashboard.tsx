@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button, Card, Icon } from "./DemoComponents";
 
 type Student = {
@@ -30,7 +30,7 @@ type TeacherDashboardProps = {
   setActiveTab: (tab: string) => void;
 };
 
-export function TeacherDashboard({ setActiveTab }: TeacherDashboardProps) {
+export function TeacherDashboard({ setActiveTab: _setActiveTab }: TeacherDashboardProps) {
   const [activeSection, setActiveSection] = useState("students");
   const [selectedStudent, setSelectedStudent] = useState<string | null>(null);
   const [newMessage, setNewMessage] = useState("");
